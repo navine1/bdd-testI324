@@ -42,6 +42,8 @@ module.exports = class CartItem {
         //TODO Implement this method
         if(!this.#validateQuantity(value)){
             this.#_quantity = value;
+        } else {
+            this.#validateQuantity(value);
         }
     }
 
@@ -54,6 +56,8 @@ module.exports = class CartItem {
         //TODO Implement this method
         if(!this.#validatePrice(value)){
             this.#_price = value;
+        } else {
+            this.#validatePrice(value);
         }
     }
 
@@ -68,6 +72,8 @@ module.exports = class CartItem {
         //TODO Implement this method
         if (!this.#validateArticleId(value)){
             this.#_articleId = value;
+        } else {
+            this.#validateArticleId(value);
         }
     }
 
