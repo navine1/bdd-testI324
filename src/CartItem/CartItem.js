@@ -25,14 +25,17 @@ module.exports = class CartItem {
 
     get articleId() {
         //TODO Implement this method
+        return this.#_articleId;
     }
 
     get name() {
         //TODO Implement this method
+        return this.#_name;
     }
 
     get quantity() {
         //TODO Implement this method
+        return this.#_quantity;
     }
 
     set quantity(value) {
@@ -41,6 +44,7 @@ module.exports = class CartItem {
 
     get price() {
         //TODO Implement this method
+        return this.#_price;
     }
 
     set price(value) {
@@ -49,6 +53,7 @@ module.exports = class CartItem {
 
     get total() {
         //TODO Implement this method
+        return this.#_quantity * this.#_price;
     }
     //endregion public methods
 
