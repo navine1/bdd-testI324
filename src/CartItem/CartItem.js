@@ -40,6 +40,9 @@ module.exports = class CartItem {
 
     set quantity(value) {
         //TODO Implement this method
+        if(!this.#validateQuantity(value)){
+            this.#_quantity = value;
+        }
     }
 
     get price() {
@@ -49,6 +52,9 @@ module.exports = class CartItem {
 
     set price(value) {
         //TODO Implement this method
+        if(!this.#validatePrice(value)){
+            this.#_price = value;
+        }
     }
 
     get total() {
@@ -60,10 +66,14 @@ module.exports = class CartItem {
     //region private methods
     set #articleId(value) {
         //TODO Implement this method
+        if (!this.#validateArticleId(value)){
+            this.#_articleId = value;
+        }
     }
 
     set #name(value) {
         //TODO Implement this method
+        this.#_name = value;
     }
 
     #validateArticleId(articleId) {
