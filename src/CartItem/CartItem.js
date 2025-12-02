@@ -85,7 +85,7 @@ module.exports = class CartItem {
     #validateArticleId(articleId) {
         //TODO Implement this method
         if (!Number.isInteger(articleId) || articleId < 1) {
-            throw new InvalidArticleIdException();
+            throw new InvalidArticleIdException('Article ID must be an integer greater than or equal to 1.');
         }
     }
 
