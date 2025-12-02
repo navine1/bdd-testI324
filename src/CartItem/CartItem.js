@@ -86,6 +86,9 @@ module.exports = class CartItem {
 
     #validatePrice(price) {
         //TODO Implement this method
+        if (!Number.isInteger(price) || price < 10) {
+            throw new InvalidPriceException('Price must be an integer greater than or equal to 10.');
+        }
     }
     //endregion private methods
 }
