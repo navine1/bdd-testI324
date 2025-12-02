@@ -82,6 +82,9 @@ module.exports = class CartItem {
 
     #validateQuantity(quantity) {
         //TODO Implement this method
+        if (!Number.isInteger(quantity) || quantity < 1) {
+            throw new InvalidQuantityException('Quantity must be an integer greater than or equal to 1.');
+        }
     }
 
     #validatePrice(price) {
